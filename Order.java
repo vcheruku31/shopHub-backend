@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.List;
 
 public class Order {
@@ -7,13 +6,13 @@ public class Order {
     private User user;
     private List<OrderItem> items;
     private String orderStatus;
-    private Date orderDate;
+    private String orderDate;
 
     public Order(int orderId, User user, List<OrderItem> items) {
         this.orderId = orderId;
         this.user = user;
         this.items = items;
-        this.orderDate = new Date();
+        this.orderDate = java.time.Instant.now().toString();
         this.orderStatus = "PLACED";
     }
 
@@ -66,11 +65,11 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 }

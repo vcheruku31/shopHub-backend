@@ -3,14 +3,16 @@ public class Product {
     private int productId;
     private String name;
     private double price;
+    private String currency;
     private int stockQuantity;
     private String category;
     private boolean isActive;
 
-    public Product(int productId, String name, double price, int stockQuantity, String category, boolean isActive) {
+    public Product(int productId, String name, double price, String currency, int stockQuantity, String category, boolean isActive) {
         this.productId = productId;
         this.name = name;
         this.price = price;
+        this.currency = currency;
         this.stockQuantity = stockQuantity;
         this.category = category;
         this.isActive = isActive;
@@ -33,6 +35,9 @@ public class Product {
     
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
+    
+    public String getCurrency() { return currency; }
+    public void setCurrency(String currency) { this.currency = currency; }
     
     public int getStockQuantity() { return stockQuantity; }
     public void setStockQuantity(int stockQuantity) { this.stockQuantity = stockQuantity; }

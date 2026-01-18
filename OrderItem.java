@@ -3,11 +3,13 @@ public class OrderItem {
     private Product product;
     private int quantity;
     private double priceAtPurchase;
+    private String currency;
 
     public OrderItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
         this.priceAtPurchase = product.getPrice();
+        this.currency = product.getCurrency();
     }
 
     public double calculateSubtotal() {
@@ -23,4 +25,7 @@ public class OrderItem {
     
     public double getPriceAtPurchase() { return priceAtPurchase; }
     public void setPriceAtPurchase(double priceAtPurchase) { this.priceAtPurchase = priceAtPurchase; }
+    
+    public String getCurrency() { return currency; }
+    public void setCurrency(String currency) { this.currency = currency; }
 }
